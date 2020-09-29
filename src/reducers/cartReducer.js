@@ -1,3 +1,4 @@
+/* eslint-disable */
 import { ADD_ITEM, REMOVE_ITEM } from '../actions/index';
 
 const cartItemsReducer = (state = [], action) => {
@@ -18,11 +19,11 @@ const cartItemsReducer = (state = [], action) => {
     case REMOVE_ITEM: {
       const cartItems = state.slice();
       const newCartItems = cartItems.map(item => {
-        if(item.id === action.item.id){
+        if (item.id === action.item.id) {
           item.quantity -= 1;
         }
         return item;
-      })
+      });
       const finalResult = newCartItems.filter(item => item.quantity > 0);
       return finalResult;
     }

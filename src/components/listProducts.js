@@ -13,8 +13,7 @@ class ListProducts extends React.Component {
         this.setState({
           items: data.data.products,
         });
-      })
-      .catch(err => console.log(err));
+      });
   }
 
   render() {

@@ -2,16 +2,16 @@
 
 Esta aplicacion recibe informacion del archivo "products.json" para listar los productos. Al hacer clic en el botón "Agregar", el producto seleccionado se agrega al carrito, el cual contiene una lista de todos los productos agregados y el monto total
 Una vez agregado, el producto se puede eliminar del carrito
-Se puede agregar un producto al carrito más de una vez, en cuyo caso es necesario escribir cuántos productos hay en el carrito y su cantidad total individualmente
+Se puede agregar un producto al carrito más de una vez.
 
 ## Preview
 
-![Preview](src/assets/moviedate.png)
+![Preview](src/resources/preview.png)
 
 ## Instrucciones
 
-To install the project follow these instructions:
 Para instalar el project realice las siguientes instrucciones:
+
 - Click en ***code*** y "clone with SSH"
 - Ir a la ruta donde desee guardar el proyecto
 - Abrir su terminal, escribir **git init** y presionar enter

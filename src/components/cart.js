@@ -5,38 +5,55 @@ import { removeItem } from '../actions/index';
 
 class Cart extends React.Component {
   hanldeDeleteFromCart(item) {
-    const {removeItem} = this.props
+    const { removeItem } = this.props;
     removeItem(item);
   }
 
   render() {
     const { cartItems } = this.props;
-    const total = cartItems.reduce((acc, nextItem) => acc+(nextItem.quantity * nextItem.amount),0)
+    const total = cartItems
+      .reduce((acc, nextItem) => acc + (nextItem.quantity * nextItem.amount), 0);
     return (
       <div className="cart">
-        <h2>CART</h2>
+        <h2>My Cart</h2>
         <div className="productsAdded">
           { cartItems.map(
             item => (
               <div id="item" key={item.id}>
                 <div>
-                  <div>
+                  <div id="topText">
+                    <img src={item.image} alt="" />
                     <span>
+                      {' '}
                       {item.quantity}
                       {' '}
-                      x &nbsp;
+                      x
+                      {' '}
+                      {item.name}
                     </span>
-                    <span>{item.name}</span>
                   </div>
-                  <span>{item.amount}</span>
+                  <span>
+                    U.P: $
+                    {item.amount}
+                  </span>
                 </div>
-                <button onClick={() => this.hanldeDeleteFromCart(item) }>X</button>
+                <button type="button" onClick={() => this.hanldeDeleteFromCart(item)}>X</button>
               </div>
             ),
           )}
         </div>
-        <h3>TOTAL</h3>
-        <span>{total.toFixed(2)}</span>
+        {(total !== 0)
+          ? (
+            <div>
+              <h3>TOTAL</h3>
+              <span>
+                $
+                {total.toFixed(2)}
+              </span>
+            </div>
+          )
+          : (<span>No items added</span>)}
+
       </div>
     );
   }
