@@ -1,12 +1,12 @@
-import React from 'react'
+import React from 'react';
 
 const Product = props => {
   const {name, image, amount, currency, measureUnit} = props;
   
   return( 
     <div className="product">
-      <img src={image} />
-      <h2>{name}</h2>
+      <img src={image} alt='' />
+      <h3>{name}</h3>
       <div id="price">
         <span>{amount}</span>
         <div>
@@ -14,7 +14,7 @@ const Product = props => {
           <span>{measureUnit}</span>
         </div>
       </div>
-      
+      <button>ADD</button>
     </div>
   )
 }

@@ -1,14 +1,9 @@
 import React from 'react';
-import Product from './product'
-import axios from 'axios'
+import Product from './product';
+import axios from 'axios';
 
 class ListProducts extends React.Component {
   state = {
-    // name:'',
-    // image: '',
-    // amount: '',
-    // currency: '',
-    // measureUnit: ''
     items: [],
     price: []
   }
@@ -33,6 +28,7 @@ class ListProducts extends React.Component {
                 amount={item.price.amount}
                 currency={item.price.currency}
                 measureUnit={item.price.measureUnit}
+                key={item.id}
               />
           ))
         }
