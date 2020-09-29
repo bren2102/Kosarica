@@ -1,5 +1,5 @@
-import React from 'react'
-import ListProducts from './listProducts'
+import React from 'react';
+import ListProducts from './listProducts';
 import Cart from './cart';
 
 const App = () => (
@@ -7,6 +7,6 @@ const App = () => (
     <ListProducts />
     <Cart />
   </div>
-)
+);
 
 export default App;

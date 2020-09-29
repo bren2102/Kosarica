@@ -1,41 +1,41 @@
 import React from 'react';
-import Product from './product';
 import axios from 'axios';
+import Product from './product';
 
 class ListProducts extends React.Component {
   state = {
     items: [],
-    price: []
   }
+
   componentDidMount() {
     axios.get('products.json')
-    .then(data => {
-      this.setState({
-        items: data.data.products,
-      })
-    })
+      .then(data => {
+        this.setState({
+          items: data.data.products,
+        });
+      });
   }
 
   render() {
-    const { items } = this.state
-    return(
-      <div className='listOfProducts'>
+    const { items } = this.state;
+    return (
+      <div className="listOfProducts">
         { items.map(
-            item => (
-              <Product
-                id={item.id}
-                name={item.name}
-                image={item.image}
-                amount={item.price.amount}
-                currency={item.price.currency}
-                measureUnit={item.price.measureUnit}
-                key={item.id}
-              />
-          ))
-        }
+          item => (
+            <Product
+              id={item.id}
+              name={item.name}
+              image={item.image}
+              amount={item.price.amount}
+              currency={item.price.currency}
+              measureUnit={item.price.measureUnit}
+              key={item.id}
+            />
+          ),
+        )}
       </div>
-    )
+    );
   }
 }
 
-export default ListProducts
+export default ListProducts;

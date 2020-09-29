@@ -7,12 +7,12 @@ import App from './components/App';
 import rootReducer from './reducers/index';
 
 const initialState = {
-  cartItems: []
-}
-const store = createStore(rootReducer,initialState);
+  cartItems: [],
+};
+const store = createStore(rootReducer, initialState);
 ReactDOM.render(
   <Provider store={store}>
     <App />
   </Provider>,
-  document.getElementById('root')
+  document.getElementById('root'),
 );

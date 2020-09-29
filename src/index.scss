@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -8,13 +9,19 @@
 
 button:hover {
   cursor: pointer;
-  background-color: black !important;
+  background-color: rgba(167, 164, 164, 0.541) !important;
+  border: 1px solid white;
   color: white;
+}
+
+.app {
+  display: flex;
 }
 
 .listOfProducts {
   display: flex;
   flex-wrap: wrap;
+  width: 80%;
 }
 
 .product {
@@ -25,12 +32,15 @@ button:hover {
   justify-content: space-between;
   padding: 10px;
   margin: 10px;
-  >* {
+
+  > * {
     margin: 10px;
   }
+
   img {
     width: 100%;
   }
+
   h3 {
     width: 100%;
     white-space: nowrap;
@@ -38,11 +48,13 @@ button:hover {
     text-overflow: ellipsis;
     text-align: center;
   }
+
   button {
-    width: 50%;
-    padding: 5px;
-    border: 1px solid black;
-    background-color: white;
+    width: 100%;
+    padding: 10px;
+    color: white;
+    border: 1px solid transparent;
+    background-color: black;
   }
 }
 
@@ -51,11 +63,40 @@ button:hover {
   align-items: center;
   justify-content: space-evenly;
   width: 50%;
+
   span:first-of-type {
     font-size: 25px;
   }
+
   div {
-   display: flex;
-   flex-direction: column;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.cart {
+  width: 20%;
+  background-color: black;
+  color: white;
+  font-weight: 300;
+  padding: 10px;
+
+  h2 {
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  #item {
+    display: flex;
+    margin-bottom: 10px;
+    justify-content: space-between;
+    align-items: center;
+
+    button {
+      padding: 5px;
+      border: 1px solid transparent;
+      color: white;
+      background-color: rgba(167, 164, 164, 0.541);
+    }
   }
 }
