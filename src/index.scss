@@ -1,15 +1,36 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
 
+$bgColor: #f4fcff;
+$cyanColor: #00463b;
+$selectedColor: #dd4c39;
+
+@mixin noneSelector {
+  -moz-user-select: none;
+  -website-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -o-user-select: none;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: content-box;
   font-family: 'Roboto', sans-serif;
+
+  @include noneSelector;
+}
+
+html,
+body,
+#root,
+.app {
+  height: 100%;
 }
 
 button:hover {
   cursor: pointer;
-  background-color: rgba(167, 164, 164, 0.541) !important;
+  background-color: $selectedColor !important;
   border: 1px solid white;
   color: white;
 }
@@ -21,7 +42,11 @@ button:hover {
 .listOfProducts {
   display: flex;
   flex-wrap: wrap;
-  width: 80%;
+  width: 75%;
+  align-items: self-start;
+  justify-content: space-between;
+  background-color: $bgColor;
+  padding: 10px;
 }
 
 .product {
@@ -30,15 +55,18 @@ button:hover {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  padding: 10px;
+  padding: 0 10px;
   margin: 10px;
+  background-color: white;
+  color: $cyanColor;
+  border-radius: 20px;
 
   > * {
     margin: 10px;
   }
 
   img {
-    width: 100%;
+    width: 70%;
   }
 
   h3 {
@@ -47,56 +75,76 @@ button:hover {
     overflow: hidden;
     text-overflow: ellipsis;
     text-align: center;
+    font-weight: 300;
   }
 
   button {
-    width: 100%;
     padding: 10px;
     color: white;
     border: 1px solid transparent;
-    background-color: black;
+    background-color: $cyanColor;
+    width: 25px;
+    border-radius: 100px;
   }
 }
 
 #price {
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
-  width: 50%;
+  justify-content: space-between;
+  width: 100%;
 
-  span:first-of-type {
-    font-size: 25px;
+  :first-child {
+    font-weight: 500;
   }
 
-  div {
-    display: flex;
-    flex-direction: column;
+  :nth-child(2) {
+    background-color: #cddcda;
+    padding: 10px;
+    border-radius: 50px;
+    font-size: 15px;
+  }
+
+  > * {
+    font-size: 20px;
   }
 }
 
 .cart {
-  width: 20%;
-  background-color: black;
+  width: 25%;
+  background-color: $cyanColor;
   color: white;
   font-weight: 300;
   padding: 10px;
 
   h2 {
-    margin-bottom: 10px;
+    margin-bottom: 40px;
     text-align: center;
+  }
+
+  h3 {
+    margin-top: 50px;
   }
 
   #item {
     display: flex;
     margin-bottom: 10px;
     justify-content: space-between;
-    align-items: center;
+    align-items: self-start;
+
+    div {
+      padding-right: 10px;
+      font-weight: 500;
+    }
 
     button {
       padding: 5px;
       border: 1px solid transparent;
       color: white;
       background-color: rgba(167, 164, 164, 0.541);
+      border-radius: 50px;
+      width: 13px;
+      font-size: 11px;
     }
   }
 }

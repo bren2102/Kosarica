@@ -13,22 +13,15 @@ const cartItemsReducer = (state = [], action) => {
           item.quantity = (item.quantity ? (item.quantity + 1) : (1));
         }
         cartItems.total += (cartItems.length !== 0 ? (item.quantity * item.amount) : (0));
-        // console.log(cartItems)
         return item;
       });
-      // console.log(cartItems.total)
       return result;
     }
     case REMOVE_ITEM: {
       const cartItems = state.slice();
-      const result = cartItems.map(item => {
-        if (item.id === action.item.id) {
-          item.quantity = (item.quantity ? (item.quantity - 1) : (1));
-        }
-        console.log(item.action);
-        return item;
-      });
-      return result;
+      const newCartItems = cartItems.filter(item => item.id !== action.item.id)
+      console.log('hola')
+      return newCartItems
     }
     default:
       return state;

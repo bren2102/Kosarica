@@ -5,7 +5,7 @@ import { addItem } from '../actions/index';
 
 class Product extends React.Component {
   handleAddToCart = () => {
-    const { id, name, amount } = this.props;
+    const { id, name, amount, cartItems } = this.props;
     const item = {
       id,
       name,
@@ -13,6 +13,7 @@ class Product extends React.Component {
     };
     const { addItem } = this.props;
     addItem(item);
+    localStorage.setItem('user', JSON.stringify(cartItems))
   }
 
   render() {
@@ -25,14 +26,11 @@ class Product extends React.Component {
         <img src={image} alt="" />
         <h3>{name}</h3>
         <div id="price">
-          <span>{amount}</span>
-          <div>
-            <span>{currency}</span>
-            <span>{measureUnit}</span>
-          </div>
+          <span>$ {amount}</span>
+          <span>{currency}/{measureUnit}</span>
+          <button onClick={() => this.handleAddToCart()} type="button">+</button>
         </div>
-        <button onClick={() => this.handleAddToCart()} type="button">ADD</button>
-      </div>
+        </div>
     );
   }
 }

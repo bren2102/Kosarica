@@ -4,21 +4,12 @@ import PropTypes from 'prop-types';
 import { removeItem } from '../actions/index';
 
 class Cart extends React.Component {
-  hanldeDeleteFromCart() {
-    const {
-      id, name, amount, removeItem,
-    } = this.props;
-    const item = {
-      id,
-      name,
-      amount,
-    };
-    removeItem(item);
+  hanldeDeleteFromCart(id) {
+    removeItem(id);
   }
 
   render() {
     const { cartItems } = this.props;
-    // console.log(cartItems)
     return (
       <div className="cart">
         <h2>CART</h2>
@@ -27,19 +18,22 @@ class Cart extends React.Component {
             item => (
               <div id="item" key={item.id}>
                 <div>
-                  <span>
-                    {item.quantity}
-                    {' '}
-                    x &nbsp;
-                  </span>
-                  <span>{item.name}</span>
+                  <div>
+                    <span>
+                      {item.quantity}
+                      {' '}
+                      x &nbsp;
+                    </span>
+                    <span>{item.name}</span>
+                  </div>
+                  <span>{item.amount}</span>
                 </div>
-                <button onClick={() => this.hanldeDeleteFromCart()}>X</button>
+                <button onClick={() => this.hanldeDeleteFromCart(item.id) }>X</button>
               </div>
             ),
           )}
         </div>
-        <h3>Total</h3>
+        <h3>TOTAL</h3>
         <span>{cartItems.total}</span>
       </div>
     );
