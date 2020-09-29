@@ -1,12 +1,19 @@
 import React from 'react';
+import {connect} from 'react-redux';
 
 class Cart extends React.Component {
   render(){
+    const {cartItems} = this.props;
+    console.log(cartItems)
     return(
       <div className="cart">
         <h2>Kosarica</h2>
         <div className="productsAdded">
-        Prod
+          { cartItems.map(
+              item => (
+                <h3>{item.name}</h3>
+              )
+          )}
         </div>
         <h3>Total</h3>
         <h3>500</h3>
@@ -15,4 +22,8 @@ class Cart extends React.Component {
   }
 }
 
-export default Cart;
+const mapStateToProps = state => ({
+  cartItems: state.cartItems,
+})
+
+export default connect(mapStateToProps, null)(Cart);

@@ -23,6 +23,7 @@ class ListProducts extends React.Component {
         { items.map(
             item => (
               <Product
+                id={item.id}
                 name={item.name}
                 image={item.image}
                 amount={item.price.amount}
