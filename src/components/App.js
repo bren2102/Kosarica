@@ -1,9 +1,9 @@
 import React from 'react'
-import Product from './product'
+import ListProducts from './listProducts'
 
 const App = () => (
   <div>
-    <Product />
+    <ListProducts />
   </div>
 )
 

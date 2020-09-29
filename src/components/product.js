@@ -1,23 +1,22 @@
 import React from 'react'
-import axios from 'axios'
 
-class Product extends React.Component{
-  state = {
-    name:'',
-  }
-  componentDidMount() {
-    axios.get('../products.json')
-    .then(data => {
-      console.log(data.data)
-    })
-  }
-  render(){
-    return( 
+const Product = props => {
+  const {name, image, amount, currency, measureUnit} = props;
+  
+  return( 
     <div className="product">
-
+      <img src={image} />
+      <h2>{name}</h2>
+      <div id="price">
+        <span>{amount}</span>
+        <div>
+          <span>{currency}</span>
+          <span>{measureUnit}</span>
+        </div>
+      </div>
+      
     </div>
-    )
-  }
+  )
 }
 
 export default Product
