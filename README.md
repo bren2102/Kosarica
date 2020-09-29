@@ -33,7 +33,7 @@ Para instalar el project realice las siguientes instrucciones:
 
 ## Live Demo
 
-[Live Demo Version](https://bren2102-moviedate.herokuapp.com/Movies)
+[Live Demo Version](https://bren2102-kosarica.herokuapp.com/)
 
 ## Autor
 
