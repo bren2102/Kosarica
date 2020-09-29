@@ -13,7 +13,6 @@ class Product extends React.Component {
     };
     const { addItem } = this.props;
     addItem(item);
-    localStorage.setItem('user', JSON.stringify(cartItems))
   }
 
   render() {
