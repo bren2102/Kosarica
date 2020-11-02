@@ -1,68 +1,54 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Kosarica
 
-## Available Scripts
+Esta aplicacion recibe informacion del archivo "products.json" para listar los productos. Al hacer clic en el botón "Agregar", el producto seleccionado se agrega al carrito, el cual contiene una lista de todos los productos agregados y el monto total
+Una vez agregado, el producto se puede eliminar del carrito
+Se puede agregar un producto al carrito más de una vez.
 
-In the project directory, you can run:
+## Preview
 
-### `yarn start`
+![Preview](src/resources/preview.png)
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Instrucciones
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+Para instalar el project realice las siguientes instrucciones:
 
-### `yarn test`
+- Click en ***code*** y "clone with SSH"
+- Ir a la ruta donde desee guardar el proyecto
+- Abrir su terminal, escribir **git init** y presionar enter
+- Escribir **git clone** -*copiar el link pegado del primer paso*- y enter
+- Finalmente abrir el proyecto con su IDE (e.g: Visual Studio Code)
+- Abra el terminal desde su proyecto
+- Escriba 'npm start' y enter
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Herramientas utilizadas
 
-### `yarn build`
+- Node.js
+- React
+- React-DOM
+- [React-Create-App](https://github.com/facebook/create-react-app)
+- Redux 
+- npm
+- CSS
+- ES6
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Live Demo
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+[Live Demo Version](https://bren2102-kosarica.herokuapp.com/)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Autor
 
-### `yarn eject`
+👤 **Brenda Yucra**
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- Github: [@bren2102](https://github.com/bren2102)
+- Linkedin: [Brenda Yucra](https://www.linkedin.com/in/brenda-yucra/)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## 🤝 Contributing
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Contributions, issues and feature requests are welcome!
 
-## Learn More
+Feel free to check the [issues page](https://github.com/bren2102/MovieDate/issues).
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Show your support
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+Give a ⭐️ if you like this project!

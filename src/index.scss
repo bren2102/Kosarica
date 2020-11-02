@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+
+$bgColor: #f4fcff;
+$cyanColor: #00463b;
+$selectedColor: #dd4c39;
+$lightBgColor: #cddcda;
+
+@mixin noneSelector {
+  -moz-user-select: none;
+  -website-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -o-user-select: none;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: content-box;
+  font-family: 'Roboto', sans-serif;
+
+  @include noneSelector;
+}
+
+html,
+body,
+#root,
+.app {
+  height: 100%;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: $selectedColor !important;
+  border: 1px solid white;
+  color: white;
+}
+
+.app {
+  display: flex;
+}
+
+.listOfProducts {
+  display: flex;
+  flex-wrap: wrap;
+  width: 75%;
+  align-items: self-start;
+  justify-content: flex-start;
+  background-color: $bgColor;
+  padding: 10px;
+}
+
+.product {
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px;
+  margin: 10px;
+  background-color: white;
+  color: $cyanColor;
+  border-radius: 20px;
+
+  > * {
+    margin: 10px;
+  }
+
+  img {
+    width: 70%;
+  }
+
+  h3 {
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: center;
+    font-weight: 300;
+  }
+}
+
+#price {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+
+  :first-child {
+    font-weight: 500;
+    font-size: 15px;
+  }
+
+  :nth-child(2) {
+    background-color: $lightBgColor;
+    padding: 10px;
+    border-radius: 50px;
+    font-size: 12px;
+  }
+
+  button {
+    padding: 10px;
+    color: white;
+    border: 1px solid transparent;
+    background-color: $cyanColor;
+    width: 12px;
+    border-radius: 100px;
+    height: 12px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+  }
+}
+
+.cart {
+  width: 25%;
+  background-color: $cyanColor;
+  color: white;
+  font-weight: 300;
+  padding: 25px;
+  overflow-y: scroll;
+
+  h2 {
+    margin-bottom: 40px;
+    text-align: center;
+    border-radius: 40px;
+    border: 1px solid $lightBgColor;
+    background-color: $lightBgColor;
+    padding: 10px;
+    color: $cyanColor;
+  }
+
+  h3 {
+    margin-top: 50px;
+  }
+
+  #item {
+    display: flex;
+    margin-bottom: 25px;
+    justify-content: space-between;
+    align-items: self-start;
+
+    img {
+      width: 30px;
+      height: 30px;
+    }
+
+    #topText {
+      display: flex;
+
+      span {
+        padding-left: 10px;
+      }
+    }
+
+    div {
+      padding-right: 10px;
+      font-weight: 500;
+      width: 90%;
+    }
+
+    button {
+      padding: 5px;
+      border: 1px solid transparent;
+      color: white;
+      background-color: rgba(167, 164, 164, 0.541);
+      border-radius: 50px;
+      width: 13px;
+      font-size: 11px;
+    }
+  }
+}
